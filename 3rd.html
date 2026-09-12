@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Warm Memories</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital@0;1&display=swap');
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    min-height: 100%;
+    font-family: 'Cormorant Garamond', serif;
+    background: radial-gradient(circle at top, #4a2a1c 0%, #2a1510 60%, #180b08 100%);
+    color: #fff3e6;
+  }
+
+  .wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 20px 50px;
+    text-align: center;
+  }
+
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: #ffdcb0;
+    text-shadow: 0 2px 18px rgba(255, 190, 120, 0.45);
+    margin: 0 0 10px 0;
+  }
+
+  .subtitle {
+    font-style: italic;
+    opacity: 0.8;
+    font-size: 1.15rem;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 800px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .frame {
+    background: #fffaf3;
+    padding: 12px 12px 34px 12px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .frame:nth-child(odd) {
+    transform: rotate(-3deg);
+  }
+
+  .frame:nth-child(even) {
+    transform: rotate(3deg);
+  }
+
+  .frame:hover {
+    transform: rotate(0deg) scale(1.07);
+    box-shadow: 0 14px 34px rgba(255, 170, 90, 0.4);
+    z-index: 5;
+    position: relative;
+  }
+
+  .frame img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .frame .caption {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #5a4433;
+    margin-top: 10px;
+  }
+
+  .closing {
+    margin-top: 55px;
+    font-style: italic;
+    font-size: 1.3rem;
+    opacity: 0.9;
+    line-height: 1.8;
+  }
+
+  .back-btn, .fav-btn {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 10px 26px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    color: #fff3e6;
+    background: rgba(200, 120, 50, 0.5);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 30px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+
+  .back-btn:hover, .fav-btn:hover {
+    background: rgba(230, 150, 70, 0.75);
+    transform: translateX(-4px);
+  }
+
+  .fav-btn {
+    background: rgba(224, 87, 122, 0.55);
+    margin-right: 16px;
+  }
+
+  .fav-btn:hover {
+    background: rgba(224, 87, 122, 0.8);
+    transform: translateX(4px);
+  }
+</style>
+</head>
+<body>
+
+  <div class="wrap">
+    <h1>Warm Memories</h1>
+    <div class="subtitle">little moments that stayed with me</div>
+
+    <div class="gallery">
+      <div class="frame"><img src="picture/2.jpg" alt="memory 1"><div class="caption"></div></div>
+      <div class="frame"><img src="picture/3.jpg" alt="memory 2"><div class="caption"></div></div>
+      <div class="frame"><img src="picture/4.jpg" alt="memory 3"><div class="caption"></div></div>
+      <div class="frame"><img src="picture/5.jpg" alt="memory 4"><div class="caption"></div></div>
+      <div class="frame"><img src="picture/6.jpg" alt="memory 5"><div class="caption"></div></div>
+      <div class="frame"><img src="picture/10.jpg" alt="memory 6"><div class="caption"></div></div>
+      <div class="frame"><img src="picture/9.jpg" alt="memory 7"><div class="caption"></div></div>
+      <div class="frame"><img src="picture/12.jpg" alt="memory 8"><div class="caption"></div></div>
+      <div class="frame"><img src="picture/13.jpg" alt="memory 9"><div class="caption"></div></div>
+      <div class="frame"><img src="picture/14.jpg" alt="memory 10"><div class="caption"></div></div>
+    </div>
+
+    <p class="closing">
+      Ten little pieces of warmth,<br>
+      each one worth holding onto.
+    </p>
+
+    <a href="fav.html" class="fav-btn">&#9829; My Favorite Picture</a>
+    <a href="2ndmot.html " class="back-btn">&#8592; Back</a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Our Picture</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital@0;1&display=swap');
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    min-height: 90%;
+    font-family: 'Cormorant Garamond', serif;
+    background: radial-gradient(circle at center, #3a0d1c 0%, #150409 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+  }
+
+  .wrap {
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+  }
+
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.4rem;
+    color: #ffd7e0;
+    text-shadow: 0 2px 16px rgba(255, 100, 140, 0.4);
+    margin: 0 0 30px 0;
+  }
+
+  /* Frame around the picture */
+  .frame {
+    position: relative;
+    display: inline-block;
+    padding: 14px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #e8b4bc, #b3324a, #e0577a, #f0c9a0);
+    box-shadow: 0 10px 40px rgba(179, 50, 74, 0.5);
+  }
+
+  .frame img {
+    display: block;
+    width: 800px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    max-width: 80vw;
+    max-height: 70vh;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: inset 0 0 0 2px rgba(255,255,255,0.5);
+  }
+
+  /* Floral corner accents */
+  .corner {
+    position: absolute;
+    font-size: 2rem;
+    color: #ffe3e8;
+    text-shadow: 0 0 10px rgba(255, 150, 180, 0.7);
+  }
+
+  .corner.tl { top: -18px; left: -18px; }
+  .corner.tr { top: -18px; right: -18px; }
+  .corner.bl { bottom: -18px; left: -18px; }
+  .corner.br { bottom: -18px; right: -18px; }
+
+  .caption {
+    margin-top: 24px;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #f2e3e6;
+    opacity: 0.9;
+  }
+
+  .back-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 26px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    color: #fff5f0;
+    background: rgba(179, 50, 74, 0.55);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 30px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+
+  .back-btn:hover {
+    background: rgba(224, 87, 122, 0.75);
+    transform: translateX(-4px);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="wrap">
+    <h1>A Little Moment</h1>
+
+    <div class="frame">
+      <div class="corner tl">🌸</div>
+      <div class="corner tr">🌸</div>
+      <div class="corner bl">🌸</div>
+      <div class="corner br">🌸</div>
+
+      <img src="picture/fav.jpg" alt="our picture">
+    </div>
+
+    <p class="caption">this one, forever in frame</p>
+
+    <a href="3rd.html" class="back-btn">&#8592; Back</a>
+  </div>
+
+</body>
+</html>
